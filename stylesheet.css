@@ -1,0 +1,157 @@
+
+/* ---CSS Reset & Global Style ---*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-image: url("images/img_Audi.JPG");
+    background-color: rgb(24, 28, 233);
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-attachment: fixed;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+h1{
+    color: rgb(242, 6, 6);
+    text-align: center;
+}
+h3{
+    color: rgb(35, 24, 103);
+}
+a:link{
+    color: #0077b6;
+    text-decoration: none;
+    border-bottom: 1px solid;
+}
+a:visited{
+    color: #6c757d;
+}
+a:hover{
+    color: #00f5d4;
+    border-bottom: none;
+}
+a:active{
+    color: #ff9f1c;
+}
+
+/* --- Responsive Design --- */
+/* Mobile version */
+@media only screen and (max-width: 600px) {
+    .main-nav {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.8rem;
+    }
+
+    .hero {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 1.5rem;
+    }
+    .hero.info{
+        width: 300px;
+    }
+    .hero.info{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+    }
+    .hero.info p{
+        font-size: 0.8rem;
+        text-align: center;
+    }
+    .hero-button{
+        font-size: 0.8rem;
+        gap: 8px;
+    }
+/* Modal Setup styling blocks */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.close {
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #999;
+    text-decoration: none;
+}
+
+.mySlides {
+    display: none;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+.caption-container {
+    text-align: center;
+    background-color: black;
+    padding: 2px 16px;
+    color: white;
+}
+
+}

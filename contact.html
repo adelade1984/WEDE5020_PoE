@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Mthombeni Jabulile">
+    <title>Contact Us</title>
+<link rel="stylesheet" href="style.css">
+        <title>Contact_Us</title>
+        <link rel="stylesheet" href="stylesheet.css">
+    </head>
+    <body style="background-color:rgb(248, 248, 254);">
+
+        <header>
+                <nav class="navbar">
+                    <a href="home.html" class="logo">MyWebsite</a>
+                    <ul class="nav-links">
+                <li><a href="one.html">Index</a></li>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About_Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+                </nav>
+                </header>
+                <main style="max-width: 1200px; margin: 40px auto; padding: 0 20px; text-align: left;">
+    <h1><u><i>Contact_Us</i></u></h1>
+    <h3>Visit Us Today in Phuthaditjhaba</h3>
+    
+    <div>
+        <p><b>Address:</b> Main Road, Phuthaditjhaba, Free State</p>
+        <p><b>Phone:</b> +27 58 123 7896</p>
+        <p><b>Email:</b> info@industrialcarwash1.co.za</p>
+        <p><b>Operating Hours:</b> Mon - Sun: 08:00 AM - 10:00 PM</p>
+    </div>
+</main>
+                <br><br>
+            
+        <p>&copy; 2026 MyWebsite. All rights reserved.</p>
+        <p id="datetime"></p>
+    </footer>
+                <script>
+        // Date and time update in the footer
+        function updateDateTime() {
+            const now = new Date();
+            const options = {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit'
+            };
+            document.getElementById('datetime').textContent = now.toLocaleDateString('en-US', options);
+        }
+        
+        // Update date time immediately
+        updateDateTime();
+        setInterval(updateDateTime, 1000);
+    </script>
+    <br><br>
+                <footer>&copy;ST10530616#Industrial_Carwash</footer>
+                </body>
+                </html> 

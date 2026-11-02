@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>Form Validation</title>
+</head>
+<body>
+    <!--creating a form-->
+    <form class="myForm" id="javForm" onsubmit="return checkUserStatus()">
+        <label>FirstName:</label><br>
+        <input type="text" id="fname" placeholder="eg.Jabulile"><br>
+        <p id="fError" class="error"></p>
+        <br>
+        <label>LastName:</label><br>
+        <input type="text" id="lname" placeholder="eg.Mthombeni"><br>
+        <p id="lError" class="error"></p>
+        <br>
+        <label>Email:</label><br>
+        <input type="email" id="email" placeholder="eg.st10530616@rcconnect.edu.za"><br>
+        <p id="email_Error" class="error"></p>
+        <br>
+        <label>Password:</label><br>
+        <input type="password" id="password" placeholder="eg.Pass123@!"><br>
+        <p id="passwordError" class="error"></p>
+        <br>
+        <label>Phone Number:</label><br>
+        <input type="text" id="phoneNumber" placeholder="eg.0729298131"><br>
+        <p id="phoneNumberError" class="error"></p>
+        <br>
+        <!-- Submit button to trigger the form validation -->
+        <input type="submit" value="Submit">
+    </form>
+
+    <!-- Container to display successful status -->
+    <div id="result"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

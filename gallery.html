@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Mthombeni Jabulile">
+    <title>Contact Us</title>
+<link rel="stylesheet" href="style.css">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <body style="background-color: rgb(248, 248, 254);">
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <a href="home.html" class="logo">MyWebsite</a>
+            <ul class="nav-links">
+                <li><a href="one.html">Index</a></li>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Images Grid Section -->
+    <main style="padding: 20px; margin-top: 80px;">
+        <h2 style="text-align: center; color: #333;">Our Gallery</h2>
+        <h3 style="text-align: center; color: #666; margin-bottom: 30px;">A Glimpse of Our Work and Vibe</h3>
+        
+<div style="text-align: center;">
+    <img src="Images/WhatsApp Image 2026-11-01 at 17.32.56 (2).jpeg" alt="Car Washing" style="width:30%; margin: 5px; cursor: pointer;" onclick="openModal; currentSlide(1)">
+    <img src="Images/WhatsApp Image 2026-11-01 at 17.32.56 (1).jpeg" alt="Braai Meat" style="width:30%; margin: 5px; cursor: pointer;" onclick="openModal; currentSlide(2)">
+    <img src="Images/WhatsApp Image 2026-11-01 at 17.32.56.jpeg " alt="Our Venue" style="width:30%; margin: 5px; cursor: pointer;" onclick="openModal; currentSlide(3)">
+</div>
+        <!-- The Lightbox Modal -->
+        <div id="myModal" class="modal">
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+
+                <div class="mySlides">
+                    <div class="numbertext">1 / 4</div>
+                    <img src="Images/WhatsApp Image 2026-11-01 at 17.32.56.jpeg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">2 / 4</div>
+                    <img src="Images/WhatsApp Image 2026-11-01 at 20.14.52 (1).jpeg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">3 / 4</div>
+                    <img src="Images/WhatsApp Image 2026-11-01 at 20.14.52.jpeg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">4 / 4</div>
+                    <img src="Images/WhatsApp Image 2026-11-01 at 20.14.53.jpeg" style="width:100%">
+                </div>
+
+                <!-- Next/previous controls -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                <!-- Caption text -->
+                <div class="caption-container">
+                    <p id="caption"></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Area -->
+    <footer>
+        <p>&copy; 2026 MyWebsite. All rights reserved.</p>
+        <p id="datetime"></p>
+        <p>&copy;ST10530616#Industrial_Carwash</p>
+    </footer>
+
+    <!-- JavaScript Controller -->
+    <script>
+        function openModal() {
+            document.getElementById("myModal").style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+        }
+
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        //Next/Previous Controls
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+        // Thumbnail Controls
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("demo");
+            var captionText = document.getElementById("caption");
+            
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            
+            if(slides[slideIndex-1]) {
+                slides[slideIndex-1].style.display = "block";
+            }
+            if(dots[slideIndex-1]) {
+                dots[slideIndex-1].className += " active";
+            }
+            if(captionText && slides[slideIndex-1]) {
+                captionText.innerHTML = slides[slideIndex-1].alt || "";
+            }
+        }
+
+        // Live Footer Clock Execution
+        function updateDateTime() {
+            const now = new Date();
+            const options = {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit'
+            };
+            const clockElement = document.getElementById('datetime');
+            if (clockElement) {
+                clockElement.textContent = now.toLocaleDateString('en-US', options);
+            }
+        }
+        updateDateTime();
+        setInterval(updateDateTime, 1000);
+    </script>
+</body>
+</html>

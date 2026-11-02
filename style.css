@@ -1,0 +1,195 @@
+    
+/* 1. Global Reset & Page Background */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start ;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* 2. Style the Form Container */
+#javForm {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+/* 3. Style the Labels */
+#javForm label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #333333;
+    font-size: 14px;
+}
+
+/* 4. Style all Input Fields (Text, Email, Password) */
+#javForm input[type="text"],
+#javForm input[type="email"],
+#javForm input[type="password"] {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 4px; /* Small gap before error message */
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+    transition: border-color 0.3s ease;
+}
+
+#javForm textarea {
+    resize:vertical;
+    min-height: 100px;
+}
+
+/* Highlight input field when clicked */
+#javForm input[type="text"]:focus,
+#javForm input[type="email"]:focus,
+#javForm input[type="password"]:focus {
+    border-color: #4a90e2;
+    outline: none;
+}
+
+/* 5. Error Message Styling */
+.error {
+    color: #e74c3c;
+    font-size: 12px;
+    margin-top: 0;
+    margin-bottom: 15px; /* Creates spacing to next label */
+    min-height: 16px; /* Prevents layout shifting when blank */
+}
+
+/* 6. Style the Submit Button */
+#javForm input[type="submit"] {
+    width: 100%;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+#javForm input[type="submit"]:hover {
+    background-color: #357abd;
+}
+
+header {
+    width: 100%;
+    background-color: #0b2545; /* Matches your dark blue banner color */
+    padding: 10px 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px; /* Separates the list items horizontally */
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.hero, .about, .contact-section, .location-section {
+    display: block;
+    width: 100%;
+    max-width: 800px; /* Caps container width nicely for scanning readability */
+    margin: 40px auto; /* Centers sections on the page with neat vertical spacing */
+    padding: 0 20px;
+    box-sizing: border-box;
+    clear: both; /* Prevents any floating bugs from previous elements */
+}
+
+.location-section iframe {
+    display: block;
+    margin: 20px auto 0 auto; /* Centers the map visually beneath the text */
+    max-width: 100%;
+}
+
+/* Container styling */
+.contact-container {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  font-family: Arial, sans-serif;
+}
+
+/* Group spacing to prevent text overlap */
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+/* Modern input inputs, dropdowns, and textareas */
+.form-group input, 
+.form-group select, 
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box; /* Crucial to keep width consistent */
+  font-size: 14px;
+}
+
+/* Custom polished submit button */
+.submit-btn {
+  background-color: #d9383a; /* Matching your red brand color */
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  width: 100%;
+  transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #b82e30;
+}
+
+/* Card layout for text-heavy pages */
+.text-section-box {
+  background: #ffffff;
+  max-width: 700px;
+  margin: 50px auto;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  line-height: 1.6;
+}
